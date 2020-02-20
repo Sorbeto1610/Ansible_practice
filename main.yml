@@ -1,0 +1,23 @@
+---
+- hosts: webservers
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - name: httpd-webserver
+
+
+- hosts: databases
+  remote_user: ubuntu
+  become: yes
+
+  tasks:
+  - name: ensure postgresql is at the latest version
+    apt:
+      name: postgresql
+      state: latest
+  - name: ensure that postgresql is started
+    service:
+      name: postgresql
+      state: started
+
+# ansible-playbook --private-key=~/Téléchargements/ansible_test.pem -i inventories/production main.yml

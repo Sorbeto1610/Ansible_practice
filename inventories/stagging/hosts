@@ -1,0 +1,16 @@
+
+[webservers]
+server1     ansible_hosts=0.0.0.0
+server2     ansible_hosts=0.0.0.1
+
+[databases]
+db1         ansible_hosts=0.0.0.0
+
+[webservers:vars]
+some_server=foo.southeast.example.com
+halon_system_timeout=30
+
+
+[databases:vars]
+some_variable=1
+
