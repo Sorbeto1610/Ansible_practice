@@ -1,10 +1,10 @@
 
 [webservers]
-server1     ansible_host=34.250.132.153
-server2     ansible_host=34.240.35.76
+server1     ansible_host=<IP_MACHINE_1>
+server2     ansible_host=<IP_MACHINE_2>
 
 [databases]
-db1         ansible_host=34.250.132.153
+db1         ansible_host=<IP_MACHINE_1>
 
 [webservers:vars]
 some_server=foo.southeast.example.com
