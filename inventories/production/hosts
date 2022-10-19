@@ -1,10 +1,10 @@
 
 [webservers]
-server1     ansible_host=<IP_MACHINE_1>
-server2     ansible_host=<IP_MACHINE_2>
+server1     ansible_host=<IP_MACHINE_1> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+server2     ansible_host=<IP_MACHINE_2> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [databases]
-db1         ansible_host=<IP_MACHINE_1>
+db1         ansible_host=<IP_MACHINE_1> ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [webservers:vars]
 some_server=foo.southeast.example.com
